@@ -8,7 +8,7 @@
   </engines>
 
   <name>Clutch'd Gimbal</name>
-  <description>Gimbal 2.0 Cordova plugin built for Appgyver Steroids</description>
+  <description>Gimbal 2.0 Cordova plugin built for Appgyver Steroids for use at weareclutch.com</description>
   <author>Bruce Bjorklund</author>
   <license>Commercial</license>
 
@@ -21,6 +21,10 @@
       <feature name="GimbalMgr">
         <param name="ios-package" value="GimbalMgr" />
       </feature>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+        <string>This application uses your location to determine if you are in close proximity to vendors.</string>
     </config-file>
 
     <header-file src="src/ios/GimbalMgr.h" />
