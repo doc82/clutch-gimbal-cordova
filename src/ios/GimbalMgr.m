@@ -28,7 +28,7 @@
 	NSString *appSecret = [[command arguments] objectAtIndex:0];
 
 	if (appSecret != nil) {
-		[Gimbal setAPIKey:appSecret options:nil];
+		// [Gimbal setAPIKey:appSecret options:nil];
 		NSString * successMsg = @"Started Service!";
 
 		// self.placeManager = [GMBLPlaceManager new];
