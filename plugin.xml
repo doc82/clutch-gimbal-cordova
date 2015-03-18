@@ -27,6 +27,10 @@
         <string>This application uses your location to determine if you are in close proximity to vendors.</string>
     </config-file>
 
+    <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <string>This app would like to scan for Beacons while it is in use.</string>
+    </config-file>
+
     <header-file src="src/ios/GimbalMgr.h" />
     <source-file src="src/ios/GimbalMgr.m" />
 
