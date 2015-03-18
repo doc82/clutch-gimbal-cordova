@@ -29,15 +29,15 @@
 
 	if (appSecret != nil) {
 		[Gimbal setAPIKey:appSecret options:nil];
-		NSString * successMsg = @"top,";
+		NSString * successMsg = @"Started Service!";
 
 		// self.placeManager = [GMBLPlaceManager new];
 		// self.placeManager.delegate = self;
 		// [GMBLPlaceManager startMonitoring];
 
-		self.beaconManager = [GMBLBeaconManager new];
-		self.beaconManager.delegate = self;
-		[self.beaconManager startListening];
+		// self.beaconManager = [GMBLBeaconManager new];
+		// self.beaconManager.delegate = self;
+		// [self.beaconManager startListening];
 
 		CDVPluginResult* pluginResult = nil;
 		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: successMsg];
