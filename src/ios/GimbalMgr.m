@@ -31,9 +31,9 @@
 		[Gimbal setAPIKey:appSecret options:nil];
 		NSString * successMsg = @"top,";
 
-		self.placeManager = [GMBLPlaceManager new];
-		self.placeManager.delegate = self;
-		[GMBLPlaceManager startMonitoring];
+		// self.placeManager = [GMBLPlaceManager new];
+		// self.placeManager.delegate = self;
+		// [GMBLPlaceManager startMonitoring];
 
 		self.beaconManager = [GMBLBeaconManager new];
 		self.beaconManager.delegate = self;
