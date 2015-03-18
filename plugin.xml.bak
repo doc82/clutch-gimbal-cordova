@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.carlipa.cordova.plugin.gimbal"
+    version="0.1.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>Gimbal plugin</name>
+  <description>Simple gimbal plugin</description>
+  <author>Lionel Penaud</author>
+  <license>Commercial</license>
+  <js-module src="www/gimbal.js" name="Gimbal">
+    <clobbers target="gimbal" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Gimbal">
+        <param name="ios-package" value="Gimbal" />
+      </feature>
+    </config-file>
+
+    <header-file src="ios/Gimbal.h" />
+    <source-file src="ios/Gimbal.m" />
+
+    <source-file src="ios/libs/FYX.framework/Versions/1.9.1/FYX" framework="true" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYX.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXLogging.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXTransmitter.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXVisit.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXAppInfo.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXSightingManager.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXTransmitterManager.h" />
+    <header-file src="ios/libs/FYX.framework/Versions/1.9.1/Headers/FYXVisitManager.h" />
+
+    <framework src="Security.framework" />
+    <framework src="MapKit.framework" />
+    <framework src="libz.dylib" />
+    <framework src="CoreLocation.framework" />
+    <framework src="CoreBluetooth.framework" />
+    <framework src="CoreData.framework" />
+
+  </platform>
+</plugin>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.clutch.cordova.gimbalmgr"
+    version="0.1.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+
+  <name>Clutch'd Gimbal</name>
+  <description>Gimbal 2.0 Cordova plugin built for Appgyver Steroids</description>
+  <author>Bruce Bjorklund</author>
+  <license>Commercial</license>
+
+  <js-module src="www/gimbal.js" name="gimbal">
+    <clobbers target="gimbalmgr" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="GimbalMgr">
+        <param name="ios-package" value="GimbalMgr" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/GimbalMgr.h" />
+    <source-file src="src/ios/GimbalMgr.m" />
+
+    <framework src="Security.framework" />
+    <framework src="MapKit.framework" />
+    <framework src="libz.dylib" />
+    <framework src="CoreLocation.framework" />
+    <framework src="CoreBluetooth.framework" />
+    <framework src="CoreData.framework" />
+    <framework src="src/ios/libs/Gimbal.framework" custom="true" />
+
+  </platform>
+</plugin>
